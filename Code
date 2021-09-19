@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{ printf(":::ROCK-PAPER-SCISSORS\n\n");
+printf("Please Enter your Name:\n");
+char n[25],p[10];
+gets(n);
+system("cls");
+printf("WELCOME "); puts(n);
+int q;
+printf("Enter how many times you want to play: ");
+scanf("%d",&q);
+getchar();
+srand(time(NULL));
+int k;
+
+for(int i=0;i<q;i++) {printf("Enter Rock, Paper or Scissors and press 'ENTER' key\n");
+gets(p);
+if(p[0]=='r'||p[0]=='R') {k=rand()%3;
+switch(k){
+case 0:printf("Rock\n"); printf("TIE\n"); break;
+case 1:printf("Scissors\n");printf("COMPUTER WINS!\n"); break;
+case 2:printf("Paper\n\n"); puts(n);printf("WINS!\n"); break;}}
+
+if(p[0]=='s'||p[0]=='S') {k=rand()%3;
+switch(k){
+case 0:printf("Rock\n"); printf("COMPUTER WINS!\n"); break;
+case 1:printf("Scissors\n");printf("TIE\n"); break;
+case 2:printf("Paper\n\n"); puts(n);printf("WINS!\n"); break;}}
+
+if(p[0]=='p'||p[0]=='P') { k=rand()%3;
+switch(k){
+case 0:printf("Rock\n\n");  puts(n);printf("WINS!\n");break;
+case 1:printf("Scissors\n");printf("COMPUTER WINS!\n"); break;
+case 2:printf("Paper\n");printf("TIE\n");  break;}} }
+
+
+    return 0;
+}
